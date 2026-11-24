@@ -1,0 +1,16 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { @apply bg-cream text-charcoal font-sans antialiased; overflow-x: hidden; }
+h1,h2,h3 { @apply font-display text-forest; }
+:focus-visible { outline: 2px solid #e0a526; outline-offset: 2px; }
+.btn { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors; }
+.btn-gold { @apply bg-gold text-charcoal hover:bg-yellow-500; }
+.btn-forest { @apply bg-forest text-white hover:bg-green-900 disabled:opacity-50; }
+.btn-line { @apply border border-forest text-forest hover:bg-forest hover:text-white; }
+.input { @apply min-h-11 w-full rounded-xl border border-charcoal/25 bg-white px-3 py-2 text-base md:text-sm; }
+.label { @apply mb-1 block text-sm font-medium; }
+.row { @apply -mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 lg:grid-cols-4; scrollbar-width: none; }
+.row::-webkit-scrollbar { display: none; }
+.row > * { @apply w-44 shrink-0 snap-start sm:w-56 md:w-auto; }
+.safe-b { padding-bottom: env(safe-area-inset-bottom, 0px); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
